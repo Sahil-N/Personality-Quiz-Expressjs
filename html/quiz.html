@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+</head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+  
+
+<div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center"></span>Personality-Match</h1>
+      <hr>
+      <h2 class="text-center">quiz</h2><br>
+<!--       <div class="text-center">
+        <a href="/quiz"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-list-alt"></span>Take the quiz.</button></a>
+      </div> -->
+
+    </div> <!-- jumbotron -->
+
+
+
+<!-- First Panel -->
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Basic Info</h3>
+  </div>
+  <div class="panel-body">
+    <div class="input-group col-sm-12">
+        <label for="sel1">Name:</label>
+      <input id="name" type="text" class="form-control" placeholder="Enter Keywords"><br>
+    </div><br>
+
+    <div class="input-group col-sm-12">
+        <label for="sel1">Picture:</label>
+      <input id="pictureurl" type="text" class="form-control" placeholder="Enter Keywords"><br>
+    </div><br>
+  </div>
+</div>
+
+<!-- Second Panel -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Quiz</h3>
+  </div>
+  <div class="panel-body">
+
+    <div class="form-group">
+      <label for="sel1">Question 1:</label>
+      <select  class="qResponse form-control" id="question1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 2:</label>
+    <select  class="qResponse form-control" id="question2">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 3:</label>
+    <select  class="qResponse form-control" id="question3">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 4:</label>
+    <select  class="qResponse form-control" id="question4">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 5:</label>
+    <select  class="qResponse form-control" id="question5">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+    <div class="form-group">
+      <label for="sel1">Question 6:</label>
+      <select  class="qResponse form-control" id="question6">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      </select>
+    </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 7:</label>
+    <select  class="qResponse form-control" id="question7">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 8:</label>
+    <select  class="qResponse form-control" id="question8">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 9:</label>
+    <select  class="qResponse form-control" id="question9">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="sel1">Question 10:</label>
+    <select  class="qResponse form-control" id="question10">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div><br>
+
+
+<!-- Button -->
+      <div class="text-center" id="submit">
+        <a href="/results"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-search"></span> Submit</button></a>
+      </div>
+
+
+</div><!-- second panel -->
+</div>
+</div>
+
+
+
+
+
+
+ <footer class="footer">
+  <div class="container">
+<!--     <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p> -->
+  </div>
+</footer> 
+
+
+
+
+
+  
+
+
+<script type="text/javascript">
+
+//on-click function kicks off when submit button clicked
+$("#submit").on("click", function(event) {
+//define preventdefault
+  event.preventDefault();
+
+  var answerArray = [];
+  //select all instances of 'qResponce' and push to answerArray
+  $("select.qResponse").each(function(){answerArray.push(this.value; console.log("hello"));});
+
+  //create an object containing user inputs as 'results'
+  var results = {name : $("#name").val().trim(), pic : $("#pictureurl").val().trim(), answers: answerArray};
+  
+  //print results to console
+  // console.log("results: " + results);
+
+  //express function to post request? results to /api/resultsjson
+  $.post("/api/resultsjson", results, function(data) {if(data){alert("success");} else{alert("failed");}});
+
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
