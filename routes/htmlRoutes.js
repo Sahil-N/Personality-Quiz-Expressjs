@@ -1,4 +1,4 @@
-var path = require("path");
+ var path = require("path");
 
 
 // ===============================================================================
@@ -12,15 +12,15 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../html/index.html"));
+    res.sendFile(path.join(__dirname, "..html/index.html"));
   });
 
   app.get("/quiz", function(req, res) {
-    res.sendFile(path.join(__dirname, "../html/quiz.html"));
+    res.sendFile(path.join(__dirname, "..html/quiz.html"));
   });
 
   // If no matching route is found default to home
   app.get("/results", function(req, res) {
-    res.sendFile(path.join(__dirname, "../html/results.html"));
+    res.sendFile(path.join(__dirname, "..html/results.html"));
   });
 };

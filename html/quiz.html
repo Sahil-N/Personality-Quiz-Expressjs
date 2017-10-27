@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <title>Quiz</title>
@@ -195,17 +195,31 @@ $("#submit").on("click", function(event) {
 
   var answerArray = [];
   //select all instances of 'qResponce' and push to answerArray
-  $("select.qResponse").each(function(){answerArray.push(this.value; console.log("hello"));});
+  $("select.qResponse").each(function(){
+    answerArray.push(this.value); 
+    console.log("hello");
+  });
 
   //create an object containing user inputs as 'results'
-  var results = {name : $("#name").val().trim(), pic : $("#pictureurl").val().trim(), answers: answerArray};
+  var results = {
+    name : $("#name").val().trim(), 
+    pic : $("#pictureurl").val().trim(), 
+    answers: answerArray
+  };
   
+  console.log(results);
+
   //print results to console
   // console.log("results: " + results);
 
   //express function to post request? results to /api/resultsjson
-  $.post("/api/resultsjson", results, function(data) {if(data){alert("success");} else{alert("failed");}});
-
+  $.post("/api/resultsjson", results, function(data) {
+    if(data){alert("success");
+    } 
+    else{
+      alert("failed");
+    }
+  });
 });
 
 

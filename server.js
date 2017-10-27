@@ -5,6 +5,8 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
+var api = require("./routes/apiroutes"); 
+var htmlRoutes = require("./routes/htmlRoutes");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -18,7 +20,9 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false })); // takes in response as JSON
+
+
+app.use(bodyParser.urlencoded({ extended: false })); // all incoming requests are run through these:
 app.use(bodyParser.json()); //takes in response as JSON
 
 // ================================================================================
@@ -27,8 +31,9 @@ app.use(bodyParser.json()); //takes in response as JSON
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routes/apiroutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use("/api", api); // prepends api in api routes section
+app.use("/", htmlRoutes);
+
 
 // =============================================================================
 // LISTENER

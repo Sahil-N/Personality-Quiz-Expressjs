@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <title>Results</title>
@@ -30,53 +30,73 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-var minIndex = 0;
-var winner;
-var nameDiv = $"<div>";
-var divPic = $"<div>";
+
 
 
 
 //express function to .get from /api/resultsjson & calls computeScore function
-function get(){$.get("/api/resultsjson",function(reply, response, error){if(error) throw error;console.log(reply);computeScore()})}
+function get(){
+  $.get("/api/resultsjson", function(data, error){
+    if(error) throw error;
+    console.log(data);
+  })
+}
 
 var name = response.name
 var picture = response.picture
 
-
-
-//function for finding the sum of the values in an array
-function getSum(total, num) {return total + num;}
-
-
-//function to find index of lowest value in array.
-function indexOfMin(arr) {if (arr.length === 0) {return -1;} var min = arr[0]; var minIndex = 0; for (var i = 1; i < arr.length; i++) {if (arr[i] < min) {minIndex = i; min = arr[i];}}console.log(minIndex) return minIndex;;}
-
-
-
 get();
 
+//function for finding the sum of the values in an array
 
-// function to compute score
-function computeScore(){
-  minIndex = 0; //reset value of minIndex each time function is called.
-  var mathArray = []; //create array of absolute value "scores"
-  var comparisonArray = []; // create array for individual array score calculation
-  for (var x = 0; x < tableArray.length; x++) {
-    for (var o = 0; o < 9; o++) {
-      var score = Math.abs(reply.answers[o] - tableArray[x].answers[o]);
-      comparisonArray[o] = score;   
-    }
-    (function myFunction() {//calculates score of individual array
-      mathArray[x] = comparisonArray.reduce(getSum);
-    })();
-  }
-  indexOfMin(mathArray);
-  winner = tableArray[minIndex];
-  console.log(winner); //pulls out correct index from tableArray
-  };
 
-  nameDiv.attr('src', .image);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getSum(total, num) {return total + num;}
+
+
+// //function to find index of lowest value in array.
+// function indexOfMin(arr) {
+//   if (arr.length === 0) {
+//     return -1;} var min = arr[0]; var minIndex = 0; for (var i = 1; i < arr.length; i++) {if (arr[i] < min) {minIndex = i; min = arr[i];}}console.log(minIndex) return minIndex;;}
+
+
+
+
+
+
+// // function to compute score
+// function computeScore(){
+//   minIndex = 0; //reset value of minIndex each time function is called.
+//   var mathArray = []; //create array of absolute value "scores"
+//   var comparisonArray = []; // create array for individual array score calculation
+//   for (var x = 0; x < tableArray.length; x++) {
+//     for (var o = 0; o < 9; o++) {
+//       var score = Math.abs(reply.answers[o] - tableArray[x].answers[o]);
+//       comparisonArray[o] = score;   
+//     }
+//     (function myFunction() {//calculates score of individual array
+//       mathArray[x] = comparisonArray.reduce(getSum);
+//     })();
+//   }
+//   indexOfMin(mathArray);
+//   winner = tableArray[minIndex];
+//   console.log(winner); //pulls out correct index from tableArray
+//   };
+
+//   nameDiv.attr('src', imgplaceholder);
 
 
 
